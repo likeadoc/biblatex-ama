@@ -1,0 +1,15 @@
+\ProvidesFile{ama.cbx}[AMA biblatex citation style]
+
+\RequireCitationStyle{numeric-comp}
+
+%cite without brackets
+\DeclareCiteCommand{\cite}%[\mkbibbrackets]
+  {\usebibmacro{cite:init}%
+   \usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \usebibmacro{cite:comp}}
+  {}
+  {\usebibmacro{cite:dump}%
+   \usebibmacro{postnote}}
+
+\endinput
